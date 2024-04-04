@@ -1,15 +1,19 @@
-"use client"; // Man ska helst inte använda "client" i en fil som inte är en hook eller en komponent.
+// Det rekommenderas att dela upp koden i flera filer för att hålla koden ren och lättläst. Inte ha allt i en o samma fil
+
+// Regelbrott: Du använder "use client" i en fil som inte är en hook eller en komponent. Ska också användas i en fil som är en hook eller en komponent.
+//Förbättring: Ta bort "use client" då det inte behövs här och kan vara förvirrande.
+"use client";
 import React, { useState } from "react";
 
 const TodoApp = () => {
-  // Bryter mot regeln att deklarera flera variabler på en rad.
+  // Regelbrott: Deklaration av flera variabler på en rad.
+  // Förbättring: Deklarera varje variabel på en egen rad för bättre läsbarhet.
   const [todos, setTodos] = useState<string[]>([]);
-
-  // Bryter mot regeln att använda korta namn för variabler.
   const [inputValue, setInputValue] = useState<string>("");
 
   const handleAddTodo = () => {
     // Bryter mot regeln att inte ha magiska värden direkt i koden.
+    // Förbättring: Använd en tydlig konstant för att undvika magiska värden.
     if (inputValue !== "") {
       setTodos([...todos, inputValue]);
       setInputValue(""); // Bryter mot regeln att ha flera instruktioner per rad.
@@ -17,6 +21,7 @@ const TodoApp = () => {
   };
 
   // Bryter mot regeln att inte använda korta och otydliga namn för funktioner.
+  // Förbättring: Använd mer beskrivande namn för funktioner för bättre förståelse.
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
