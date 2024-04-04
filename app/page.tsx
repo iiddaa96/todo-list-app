@@ -1,30 +1,30 @@
-//Ett "regelbrott" är att skriva all kod i en o samma fil.
-//Förbättring är att dela upp koden i flera filer för att öka läsbarheten.
+// All kod är skriven i en enda fil, vilket kan göra den svår att underhålla och förstå.
+// Förbättring: Dela upp koden i flera filer för att öka läsbarheten och underhållbarheten, till exempel separera logik och komponenter i olika filer.
 
-// Man ska helst inte använda "client" i en fil som inte är en hook eller en komponent.
-// Förbättring är att använda "useClient" i komponenter istället för huvud page.
+//  "client" används utanför en hook eller komponent, vilket kan bryta mot en konsekvent kodstruktur.
+// Förbättring: Använd "useClient" i komponenter istället för att använda det direkt i huvudfilen.
 "use client";
 
 import React, { useState } from "react";
 
 const TodoApp = () => {
-  // Regelbrott: Använd mer beskrivande namn för att öka kodens läsbarhet.
-  // Förbättring är att använda mer beskrivande namn för att öka kodens läsbarhet. Exempel: const [todos, setTodos] = useState<string[]>([]);
+  // Variabelnamnen a, b, x, y är inte beskrivande, vilket kan försvåra förståelsen av koden.
+  // Förbättring: Använd mer beskrivande namn för att förbättra kodens läsbarhet och underhållbarhet.
   const [a, b] = useState<string[]>([]);
   const [x, y] = useState<string>("");
 
-  // Regelbrott: Använd mer beskrivande namn för att öka kodens läsbarhet.
   const handleAddTodo = () => {
-    // Regelbrott: Använd en konstant för att definiera värdet.
-    // Förbättring är att använda en konstant för att definiera värdet. Exempel: const trimmedValue = x.trim();
+    //  Flera instruktioner skrivs på samma rad, vilket kan försvåra felsökning och underhåll.
+    // Förbättring: Använd en instruktion per rad för att öka läsbarheten och underhållbarheten.
     if (x.trim() !== "") {
       b([...a, x]);
-      y(""); // Regelbrott: Flertalet instruktioner per rad. Förbättring är att använda en instruktion per rad.
+      y(""); // Regelbrott: Variabelnamnet "y" är inte beskrivande och kan förvirra andra utvecklare.
+      // Förbättring: Använd ett mer beskrivande namn för att öka förståelsen av variabeln.
     }
   };
 
-  // Regelbrott: Använd mer beskrivande namn för att öka kodens läsbarhet.
-  // Förbättring är att använda mer beskrivande namn för att öka kodens läsbarhet. Exempel: const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { setTodoValue(e.target.value); };
+  // Samma igen här, funktionen använder variabeln "y" som inte är beskrivande för dess syfte.
+  // Förbättring: Använd ett mer beskrivande namn för funktionen för att öka förståelsen av dess syfte.
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     y(e.target.value);
   };
