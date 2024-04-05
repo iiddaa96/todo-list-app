@@ -2,4 +2,4 @@
 
 ### Uppgiftsbeskrivning
 
-- Din uppgift är att lämna in ett mycket dåligt, men fungerande projekt till mig. Tanken är att du ska visa kunskap på good practice genom att bryta principer och via kommentarer förklara hur man skulle kunna ändra på koden.
+- Min uppgift är att välja ut fem principer/riktlinjer från Bulletproof Reacteller Clean Code, och sedan kommentera i koden hur jag bryter mot principen. Jag ska Kommentera vad jag skulle göra för att förbättra den. Och sedan göra samma sak med fem regler från ESLint.
