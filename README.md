@@ -1,5 +1,6 @@
-# Spagettikod
+# Spaghetti code
 
 ### Uppgiftsbeskrivning
 
-- Min uppgift är att välja ut fem principer/riktlinjer från Bulletproof Reacteller Clean Code, och sedan kommentera i koden hur jag bryter mot principen. Jag ska Kommentera vad jag skulle göra för att förbättra den. Och sedan göra samma sak med fem regler från ESLint.
+In this project I have selected five principles/guidelines from Bulletproof Reacteller Clean Code.
+I have commented in my code how I violate the principle. I have also commented what kind of improvement I can make. I have also done the same with the five rules from ESlint.
